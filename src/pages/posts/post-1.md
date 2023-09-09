@@ -1,16 +1,14 @@
 ---
-title: 'My First Blog Post'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: My First Blog Post
 pubDate: 2023-09-08
 description: 'This is the first post of my new Astro blog'
-author: 'David Martinez'
+author: David Martinez
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
-
-Published on: 2023-09-08
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
