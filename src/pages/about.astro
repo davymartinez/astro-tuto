@@ -1,5 +1,9 @@
 ---
 import '../styles/global.css'
+import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "About Me";
 const identity = {
     firstName: "David",
@@ -36,9 +40,7 @@ const textCase = "uppercase";
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <Header />
 		<h1>{pageTitle}</h1>
 		<h2>...and my new Astro site!</h2>
         <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -48,7 +50,7 @@ const textCase = "uppercase";
         <ul>
             <li>My name is {identity.firstName}.</li>
             <li>I live in {identity.country} amd I worl as a {identity.occupation}.</li>
-            {identity.hobbies.length >= 2 && <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]</li>}
+            {identity.hobbies.length >= 2 && <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]</li>}}
         </ul>
         <p>My skills are:</p>
         <ul>
@@ -57,5 +59,9 @@ const textCase = "uppercase";
         {happy && <p>I am happy to be learning Astro!</p>}
         {finished && <p>I finished this tutorial!</p>}
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</body>
+        <Footer />
+        <script>
+			import "../scripts/menu.js"
+		</script>
+    </body>
 </html>
